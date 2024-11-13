@@ -145,3 +145,7 @@ document.getElementById('extend-time-btn').addEventListener('click', () => {
 
 // Initialize lot display on page load
 document.addEventListener('DOMContentLoaded', updateLotDisplay);
+
+
+// Test Change for GitHub
+// Hi - Matt
