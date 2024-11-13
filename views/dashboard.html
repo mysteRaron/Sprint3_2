@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="top-nav">
+        <a href="/" class="nav-btn">Home</a>
+        <a href="/vehicle" class="nav-btn">Vehicle Info</a>
+        <a href="/paymentInfo" class="nav-btn">Payment Info</a>
+        <a href="/parking-lots" class="nav-btn">Parking Lot</a>
+        <a href="/timer" class="nav-btn">Parking Timer</a>
+        <a href="/settings" class="nav-btn">Settings</a>
+        <a href="/logout" class="nav-btn">Logout</a>
+    </div>
+
+    <!-- Dashboard Content -->
+    <div class="container"> <!-- Added container for better alignment and padding -->
+        <div class="page" id="dashboard-page">
+            <h1>Welcome to Your Dashboard!</h1>
+            <p>Here you can view and manage your account details.</p>
+
+            <section class="info-section"> <!-- Added class for sections -->
+                <h2>Your Details</h2>
+                <p>Email: <span id="user-email"></span></p>
+                <p>Phone: <span id="user-phone"></span></p>
+            </section>
+
+            <section class="info-section">
+                <h2>Your Vehicle Information</h2>
+                <div id="vehicle-info"></div>
+                <!-- Form to add a new vehicle -->
+                <form id="vehicle-info-form">
+                    <h3>Add a New Vehicle</h3>
+                    <label for="license-plate">License Plate Number</label>
+                    <input type="text" id="license-plate" name="licensePlate" required>
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" maxlength="2" required>
+                    <div class="radio-group">
+                        <input type="checkbox" id="default-vehicle" name="isDefault">
+                        <label for="default-vehicle">Set as Default Vehicle</label>
+                    </div>
+                    <button type="submit">Add Vehicle</button>
+                </form>
+            </section>
+
+            <section class="info-section">
+                <h2>Select a Parking Lot</h2>
+                <!-- Parking lot details can also be grouped -->
+                <div class="parking-lot-details">
+                    <div class="parking-lot">
+                        <h2>Girard Park Circle Garage</h2>
+                        <p id="lot1-spots">200 Spots Available</p>
+                        <button class="select-lot-btn" data-lot="lot1">Select</button>
+                    </div>
+                    <div class="parking-lot">
+                        <h2>Wilson Lot</h2>
+                        <p id="lot2-spots">200 Spots Available</p>
+                        <button class="select-lot-btn" data-lot="lot2">Select</button>
+                    </div>
+                    <div class="parking-lot">
+                        <h2>611 St. Landry Garage</h2>
+                        <p id="lot3-spots">200 Spots Available</p>
+                        <button class="select-lot-btn" data-lot="lot3">Select</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2>Confirm Parking Session</h2>
+                <label for="hours">Select Hours:</label>
+                <input type="number" id="hours" name="hours" min="1" max="24" value="1">
+                <p>Total Cost: $<span id="total-cost">10</span></p>
+                <button id="confirm-payment-btn">Confirm Payment</button>
+            </section>
+
+            <section class="info-section">
+                <h2>Your Recent Parking Sessions</h2>
+                <div id="session-info"></div>
+            </section>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
+
+
+
