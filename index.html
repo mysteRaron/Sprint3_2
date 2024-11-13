@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Parking App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--Logo -->
+    <div id="logo-container">
+        <img src="ullPark2.png" alt="U'LL Park Mobile Logo" id="logo">
+    </div>  
+
+    <!-- Registration Page -->
+    <div class="page" id="registration-page">
+        <h1>Login / Register</h1>
+        <form id="registration-form">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login / Register</button>
+        </form>
+    </div>
+
+    <!-- Add Vehicle Information Page -->
+    <div class="page" id="vehicle-info-page">
+        <h1>Add Vehicle Information</h1>
+        <form id="vehicle-info-form">
+            <label for="license-plate">License Plate Number</label>
+            <input type="text" id="license-plate" name="license-plate" required>
+
+            <label for="state">State</label>
+            <input type="text" id="state" name="state" required>
+
+            <div class="radio-group">
+                <input type="radio" id="default-vehicle" name="default-vehicle" value="default">
+                <label for="default-vehicle">Set as Default Vehicle</label>
+            </div>
+
+            <button type="submit">Save Vehicle Info</button>
+        </form>
+    </div>
+
+    <!-- Add Payment Information Page -->
+    <div class="page" id="payment-info-page">
+        <h1>Add Payment Information</h1>
+        <form id="payment-info-form">
+            <label for="card-name">Name on Card</label>
+            <input type="text" id="card-name" name="card-name" required>
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <div class="radio-group">
+                <input type="radio" id="default-payment" name="default-payment" value="default">
+                <label for="default-payment">Set as Default Payment Method</label>
+            </div>
+
+            <button type="submit">Save Payment Info</button>
+        </form>
+    </div>
+
+    <!-- Select Parking Lot Page -->
+    <div class="page" id="parking-lot-page">
+        <h1>Select Parking Lot</h1>
+        <div class="parking-lot">
+            <h2>Girard Park Circle Garage</h2>
+            <p>200 Spots Available</p>
+            <button class="select-lot-btn">Select</button>
+        </div>
+        <div class="parking-lot">
+            <h2>Wilson Lot</h2>
+            <p>200 Spots Available</p>
+            <button class="select-lot-btn">Select</button>
+        </div>
+        <div class="parking-lot">
+            <h2>611 St. Landry Garage</h2>
+            <p>200 Spots Available</p>
+            <button class="select-lot-btn">Select</button>
+        </div>
+    </div>
+
+    <!-- Select Parking Time and Confirm Payment Page -->
+    <div class="page" id="confirm-payment-page">
+        <h1>Confirm Parking</h1>
+        <label for="hours">Select Hours:</label>
+        <input type="number" id="hours" name="hours" min="1" max="24" value="1">
+        
+        <p>Total Cost: $<span id="total-cost">10</span></p>
+        <button id="confirm-payment-btn">Confirm Payment</button>
+    </div>
+
+    <!-- Parking Timer Page -->
+    <div class="page" id="parking-timer-page">
+        <h1>Parking Time Remaining</h1>
+        <p id="timer">0:00:00</p>
+
+        <!-- Extend Time Dropdown -->
+        <label for="extend-hours">Extend Parking Time:</label>
+        <select id="extend-hours">
+            <option value="1">1 Hour</option>
+            <option value="2">2 Hours</option>
+            <option value="3">3 Hours</option>
+            <option value="4">4 Hours</option>
+            <option value="5">5 Hours</option>
+            <option value="6">6 Hours</option>
+            <option value="7">7 Hours</option>
+            <option value="8">8 Hours</option>
+            <option value="9">9 Hours</option>
+            <option value="10">10 Hours</option>
+            <option value="11">11 Hours</option>
+            <option value="12">12 Hours</option>
+        </select>
+
+        <p>Total Extend Cost: $<span id="extend-cost">2.50</span></p>
+        <button id="extend-time-btn">Extend Time</button>
+    </div>
+
+    <!-- User Account Settings Page -->
+    <div class="page" id="user-settings-page">
+        <h1>User Settings</h1>
+        <form id="user-settings-form">
+            <label for="email-update">Update Email</label>
+            <input type="email" id="email-update" name="email-update" required>
+
+            <label for="phone-update">Update Phone Number</label>
+            <input type="tel" id="phone-update" name="phone-update" required>
+
+            <label for="password-update">Update Password</label>
+            <input type="password" id="password-update" name="password-update" required>
+
+            <h2>Update Vehicle Information</h2>
+            <label for="license-plate-update">License Plate Number</label>
+            <input type="text" id="license-plate-update" name="license-plate-update" required>
+
+            <label for="state-update">State</label>
+            <input type="text" id="state-update" name="state-update" required>
+
+            <h2>Update Payment Information</h2>
+            <label for="card-name-update">Name on Card</label>
+            <input type="text" id="card-name-update" name="card-name-update" required>
+
+            <label for="card-number-update">Card Number</label>
+            <input type="text" id="card-number-update" name="card-number-update" required>
+
+            <button type="submit">Save Changes</button>
+        </form>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div id="bottom-nav">
+        <button class="nav-btn" data-target="registration-page">Login / Register</button>
+        <button class="nav-btn" data-target="parking-lot-page">Parking Lots</button>
+        <button class="nav-btn" data-target="parking-timer-page">Timer</button>
+        <button class="nav-btn" data-target="user-settings-page">Settings</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
