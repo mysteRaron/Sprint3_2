@@ -4,9 +4,12 @@
     box-sizing: border-box;
 }
 
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FF4C00;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E34234;
+    background: linear-gradient(135deg, #ff4c4c, #e34234),
+                url('parking garage.jpg');
     color: white;
     display: flex;
     justify-content: center;
@@ -14,7 +17,12 @@ body {
     height: 100vh;
     margin: 0;
     overflow: hidden;
-}
+    padding-top: 120px;
+    background-image: url('parking garage.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover;
+    background-position: center center;
+} 
 
 .page {
     display: flex;
@@ -24,8 +32,8 @@ body {
     max-width: 500px;
     height: 100vh;
     padding: 20px;
-    background-color: #fff;
-    color: #000;
+    background-color: #F0F0F0;;
+    color: #333;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -42,7 +50,7 @@ body {
     text-align: center;
     margin: 0;
     border-bottom: 1px solid #ccc;
-    color: #FF4C00;
+    color: black;
 }
 
 form {
@@ -61,10 +69,14 @@ form select {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #DCDCDC;
     border-radius: 5px;
+    font-size: 14px; /* Increased readability */
 }
-
+form input:focus, form select:focus {
+    border-color: #E34234;
+    outline: none;
+}
 .radio-group {
     display: flex;
     align-items: center;
@@ -78,18 +90,24 @@ form select {
 button, .select-lot-btn, #extend-time-btn {
     padding: 15px;
     width: 100%;
-    background-color: #6A0DAD;
+    background-color: #D14028; /* More vibrant color */
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
     text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
-    background-color: #5C0D99;
+    background-color: #A83520; /* Darker shade on hover */
+}
+
+form label {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 .parking-lot {
@@ -98,13 +116,13 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     align-items: center;
     width: 100%;
     margin-bottom: 20px;
-    background-color: #F0F0F0;
+    background-color: #DCDCDC;
     padding: 15px;
     border-radius: 5px;
 }
 
 .parking-lot h2 {
-    color: #FF4C00;
+    color: black;
     margin: 0;
 }
 
@@ -115,15 +133,17 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     text-align: center;
 }
 
-#bottom-nav {
+#top-nav {
     position: fixed;
-    bottom: 0;
+    top: 0;
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-around;
-    background-color: #FF4C00;
+    background-color: black; 
     padding: 10px;
+    z-index: 100; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .nav-btn {
@@ -131,6 +151,7 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     border: none;
     color: white;
     font-size: 18px;
+    padding: 10px;
     cursor: pointer;
 }
 
@@ -143,10 +164,103 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     top: 0px;
     left: 30px;
     z-index: 100;
+    padding-top: 50px;
 }
 
 #logo {
-    height: 185px;
+    height: 185px; 
     width: auto;
 }
 
+#about-us-page {
+    background-color: #F7F7F7;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 875px;
+    margin: auto;
+    text-align: center;
+    max-height: 80vh; /* Adjust this to control the maximum height */
+    overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.about-us-text {
+    margin: 20px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    justify-items: center;
+    padding-top: 20px;
+    justify-content: space-around;
+    margin-top:20px;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 175px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.team-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.team-headshot {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    font-size: 14px;
+    color: #666;
+}
+.page, .parking-lot, .team-member {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow */
+}
+form input, form select, .parking-lot, .team-member {
+    padding: 14px; /* Increased padding for comfort */
+    margin-bottom: 20px;
+}
+
+.page h1, .page h2, .team-member {
+    background-color: #FAFAFA; /* Softer off-white */
+    border: 1px solid #DDD; /* Softer border color */
+}
+
+form input, form select, button, .team-member {
+    border-radius: 8px; /* Softer corner radius */
+}
