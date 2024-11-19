@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Payment Information</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div id="top-nav">
+        <a href="/" class="nav-btn">Home</a>
+        <a href="/register" class="nav-btn">Register</a>
+        <a href="/login" class="nav-btn">Login</a>
+        <a href="/vehicle" class="nav-btn">Vehicle Info</a>
+        <a href="/paymentInfo" class="nav-btn">Payment Info</a>
+        <a href="/parking-lots" class="nav-btn">Parking Lot</a>
+        <a href="/confirm-payment" class="nav-btn">Confirm Payment</a>
+        <a href="/timer" class="nav-btn">Parking Timer</a>
+    </div>
+
+    <!-- Page Content -->
+    <div class="page" id="payment-info-page">
+        <h1>Add Payment Information</h1>
+        <form id="payment-info-form">
+            <label for="card-name">Name on Card</label>
+            <input type="text" id="card-name" name="card-name" required>
+
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" name="card-number" required>
+
+            <div class="radio-group">
+                <input type="radio" id="default-payment" name="default-payment" value="default">
+                <label for="default-payment">Set as Default Payment Method</label>
+            </div>
+
+            <button type="submit">Save Payment Info</button>
+        </form>
+    </div>
+
+    <script src="/app.js"></script>
+</body>
+</html>
