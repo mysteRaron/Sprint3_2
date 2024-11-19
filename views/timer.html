@@ -9,23 +9,26 @@
 <body>
     <!-- Navigation Bar -->
     <div id="top-nav">
-        <a href="/" class="nav-btn">Home</a>
-        <a href="/register" class="nav-btn">Register</a>
-        <a href="/login" class="nav-btn">Login</a>
-        <a href="/vehicle" class="nav-btn">Vehicle Info</a>
-        <a href="/paymentInfo" class="nav-btn">Payment Info</a>
-        <a href="/settings" class="nav-btn">Settings</a>
-        <a href="/parking-lots" class="nav-btn">Parking Lots</a>
-        <a href="/confirm-payment" class="nav-btn">Confirm Payment</a>
-        <a href="/timer" class="nav-btn">Timer</a>
+        <div class="nav-center">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/vehicle" class="nav-btn">My Vehicles</a>
+            <a href="/settings" class="nav-btn">Profile Settings</a>
+            <a href="/parking-lots" class="nav-btn">View Lots</a>
+        </div>
+        <div class="profile-section">
+            <a href="/profile" class="profile-link">My Profile</a>
+        </div>
     </div>
+
     <div id="logo-container">
         <img src="ullPark2.png" alt="U'LL Park Mobile Logo" id="logo">
     </div>  
-    <div class="page" id="parking-timer-page">
-        <h1>Parking Time Remaining</h1>
-        <p id="timer">0:00:00</p>
 
+    <div class="page" id="parking-timer-page">
+    <h1>Parking Time Remaining</h1>
+    <p id="timer">0:00:00</p>
+
+    <div class="extension-section">
         <label for="extend-hours">Extend Parking Time:</label>
         <select id="extend-hours">
             <option value="1">1 Hour</option>
@@ -41,10 +44,13 @@
             <option value="11">11 Hours</option>
             <option value="12">12 Hours</option>
         </select>
-
-        <p>Total Extend Cost: $<span id="extend-cost">2.50</span></p>
-        <button id="extend-time-btn">Extend Time</button>
+        <p class="extend-cost">
+            Total Extend Cost: <span id="extend-cost">$2.50</span>
+        </p>
     </div>
+
+    <button id="extend-time-btn">Extend Time</button>
+
     <script src="/app.js"></script>
 </body>
 </html>

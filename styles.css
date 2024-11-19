@@ -256,6 +256,80 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
+/* Timer Page Styling */
+#parking-timer-page {
+    text-align: center;
+    padding: 20px;
+}
+
+#parking-timer-page h1 {
+    color: #FF4C00;
+    margin-bottom: 20px;
+}
+
+#timer {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #6A0DAD;
+}
+
+.extension-section {
+    background-color: #F8F8F8;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.extension-section label {
+    font-size: 16px;
+    color: #FF4C00;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#extend-hours {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.extend-cost {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.extend-cost span {
+    color: #FF4C00;
+}
+
+#extend-time-btn {
+    background-color: #6A0DAD;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#extend-time-btn:hover {
+    background-color: #5C0D99;
+}
+
+
 /* Hide old bottom navigation */
 #bottom-nav {
     display: none;
