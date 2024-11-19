@@ -147,3 +147,21 @@ document.getElementById('extend-time-btn').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', updateLotDisplay);
 
 
+// Handle Login / Register Form Submission
+const registrationForm = document.getElementById('registration-form');
+
+registrationForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // Simple validation to check if fields are filled
+    if (email === '' || phone === '' || password === '') {
+        showError("All fields are required.");
+    } else {
+        // Redirect to Parking Lot Page
+        showPage('parking-lot-page');
+    }
+});
