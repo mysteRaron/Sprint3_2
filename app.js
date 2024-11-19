@@ -145,3 +145,61 @@ document.getElementById('extend-time-btn').addEventListener('click', () => {
 
 // Initialize lot display on page load
 document.addEventListener('DOMContentLoaded', updateLotDisplay);
+
+
+// Handle Login / Register Form Submission
+const registrationForm = document.getElementById('registration-form');
+
+registrationForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const password = document.getElementById('password').value.trim();
+
+    // Simple validation to check if fields are filled
+    if (email === '' || phone === '' || password === '') {
+        showError("All fields are required.");
+    } else {
+        // Redirect to Parking Lot Page
+        showPage('vehicle-info-page');
+    }
+});
+
+
+// Handle Add Vehicle Information Form Submission
+const vehicleInfoForm = document.getElementById('vehicle-info-form');
+
+vehicleInfoForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    const licensePlate = document.getElementById('license-plate').value.trim();
+    const state = document.getElementById('state').value.trim();
+
+    // Simple validation to check if fields are filled
+    if (licensePlate === '' || state === '') {
+        showError("All vehicle fields are required.");
+    } else {
+        // Proceed to the "Add Payment Information" page after saving vehicle information
+        showPage('payment-info-page');
+    }
+});
+
+
+// Handle Add Payment Information Form Submission
+const paymentInfoForm = document.getElementById('payment-info-form');
+
+paymentInfoForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent the default form submission
+
+    const cardName = document.getElementById('card-name').value.trim();
+    const cardNumber = document.getElementById('card-number').value.trim();
+
+    // Simple validation to check if fields are filled
+    if (cardName === '' || cardNumber === '') {
+        showError("All payment fields are required.");
+    } else {
+        // Proceed to the Parking Lot Page after saving payment information
+        showPage('parking-lot-page');
+    }
+});
