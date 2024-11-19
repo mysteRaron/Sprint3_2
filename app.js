@@ -147,5 +147,3 @@ document.getElementById('extend-time-btn').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', updateLotDisplay);
 
 
-// Test Change for GitHub
-// Hi - Matt
