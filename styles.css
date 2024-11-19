@@ -36,7 +36,7 @@ body {
     color: #333;
     border-radius: 10px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    overflow: visible;
     position: relative;
 }
 
@@ -263,4 +263,7 @@ form input, form select, .parking-lot, .team-member {
 
 form input, form select, button, .team-member {
     border-radius: 8px; /* Softer corner radius */
+}
+#current-email {
+    color: #000; /* Black text for visibility */
 }
