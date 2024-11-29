@@ -240,6 +240,24 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     color: var(--primary-red);
 }
 
+/* Confirm Payment Section */
+.form-section {
+    margin: 20px 0;
+}
+
+.form-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.payment-summary {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
 /* Hide old bottom navigation */
 #bottom-nav {
     display: none;
