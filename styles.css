@@ -21,7 +21,9 @@ html, body {
 }
 
 body {
-    background: linear-gradient(135deg, var(--primary-red), var(--secondary-black));
+    background-image: linear-gradient(135deg, rgba(227, 66, 52, 0.75), rgba(32, 32, 32, 0.75)), url('girard.jpg');
+    background-attachment: fixed;
+    background-size: cover;
     color: white;
     display: flex;
     flex-direction: column;
@@ -120,15 +122,16 @@ form {
 
 form label {
     margin-bottom: 5px;
-    color: black;
+    color: var(--secondary-black);
     font-weight: bold;
     align-self: flex-start;
+    font-size: 1.1rem;
 }
 
 form input,
 form select {
     width: 100%;
-    max-width: 300px;
+    max-width: 350px;
     padding: 12px;
     margin-bottom: 15px;
     border: 1px solid var(--primary-red);
@@ -263,7 +266,7 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     border: 2px solid var(--primary-red);
     padding: 20px;
     margin-bottom: 20px;
-    background-color: var(--light-gray);
+    background-color: transparent;
     border-radius: 8px;
 }
 
@@ -282,6 +285,50 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     margin-bottom: 8px;
     display: block;
     color: black;
+}
+
+/* For Dashboard Use */
+.info-section {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(235, 235, 235, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow var(--transition-default);
+}
+
+.info-section h2 {
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.info-section p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.info-section .vehicle-info,
+.info-section .session-info {
+    padding-top: 10px;
+    text-align: center;
+}
+
+.session-info p {
+    text-align: center;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    color: black;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.5;
 }
 
 /* Hide old bottom navigation */

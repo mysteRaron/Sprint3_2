@@ -9,22 +9,24 @@
 <body>
     <!-- Navigation Bar -->
     <div id="top-nav">
-        <a href="/" class="nav-btn">Home</a>
-        <a href="/vehicle" class="nav-btn">Vehicle Info</a>
-        <a href="/paymentInfo" class="nav-btn">Payment Info</a>
-        <a href="/parking-lots" class="nav-btn">Parking Lot</a>
-        <a href="/timer" class="nav-btn">Parking Timer</a>
-        <a href="/settings" class="nav-btn">Settings</a>
-        <a href="/logout" class="nav-btn">Logout</a>
+        <div class="nav-center">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/vehicle" class="nav-btn">My Vehicles</a>
+            <a href="/settings" class="nav-btn">Profile Settings</a>
+            <a href="/parking-lots" class="nav-btn">View Lots</a>
+        </div>
+        <div class="profile-section">
+            <a href="/profile" class="profile-link">My Profile</a>
+        </div>
     </div>
 
     <!-- Dashboard Content -->
-    <div class="container"> <!-- Added container for better alignment and padding -->
+    <div class="container">
         <div class="page" id="dashboard-page">
-            <h1>Welcome to Your Dashboard!</h1>
-            <p>Here you can view and manage your account details.</p>
+            <h1>Welcome to Your U'LL Park Dashboard!</h1>
+            <p class="intro-text">Here you can view and manage your account details.</p>
 
-            <section class="info-section"> <!-- Added class for sections -->
+            <section class="info-section">
                 <h2>Your Details</h2>
                 <p>Email: <span id="user-email"></span></p>
                 <p>Phone: <span id="user-phone"></span></p>
@@ -32,10 +34,14 @@
 
             <section class="info-section">
                 <h2>Your Vehicle Information</h2>
-                <div id="vehicle-info"></div>
+                <div id="vehicle-info">
+                    <p>License Plate: <span id="license-plate"></span></p>
+                    <p>State: <span id="state"></span></p>
+                </div>
+
                 <!-- Form to add a new vehicle -->
                 <form id="vehicle-info-form">
-                    <h3>Add a New Vehicle</h3>
+                    <h2>Add a New Vehicle</h2>
                     <label for="license-plate">License Plate Number</label>
                     <input type="text" id="license-plate" name="licensePlate" required>
                     <label for="state">State</label>
@@ -71,11 +77,13 @@
             </section>
 
             <section class="info-section">
-                <h2>Confirm Parking Session</h2>
-                <label for="hours">Select Hours:</label>
-                <input type="number" id="hours" name="hours" min="1" max="24" value="1">
-                <p>Total Cost: $<span id="total-cost">10</span></p>
-                <button id="confirm-payment-btn">Confirm Payment</button>
+                <div class="session-info">
+                    <h2>Confirm Parking Session</h2>
+                    <label for="hours">Select Hours:</label>
+                    <input type="number" id="hours" name="hours" min="1" max="24" value="1">
+                    <p>Total Cost: $<span id="total-cost">10</span></p>
+                    <button id="confirm-payment-btn" type="submit">Confirm Payment</button>
+                </div>
             </section>
 
             <section class="info-section">
