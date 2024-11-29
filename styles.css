@@ -258,6 +258,32 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     margin: 20px 0;
 }
 
+/* Settings Page */
+#settings-page fieldset {
+    border: 2px solid var(--primary-red);
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: var(--light-gray);
+    border-radius: 8px;
+}
+
+#settings-page fieldset legend {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: var(--light-gray);
+    padding: 0 10px;
+    margin-bottom: 10px;
+    background-color: var(--primary-red);
+    border-radius: 4px;
+}
+
+#settings-page label {
+    font-size: 1em;
+    margin-bottom: 8px;
+    display: block;
+    color: black;
+}
+
 /* Hide old bottom navigation */
 #bottom-nav {
     display: none;
