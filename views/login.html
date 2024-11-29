@@ -9,15 +9,15 @@
 <body>
     <!-- Navigation Bar -->
     <div id="top-nav">
-        <a href="/" class="nav-btn">Home</a>
-        <a href="/register" class="nav-btn">Register</a>
-        <a href="/login" class="nav-btn">Login</a>
-        <a href="/vehicle" class="nav-btn">Vehicle Info</a>
-        <a href="/paymentInfo" class="nav-btn">Payment Info</a>
-        <a href="/settings" class="nav-btn">Settings</a>
-        <a href="/parking-lots" class="nav-btn">Parking Lots</a>
-        <a href="/confirm-payment" class="nav-btn">Confirm Payment</a>
-        <a href="/timer" class="nav-btn">Timer</a>
+        <div class="nav-center">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/vehicle" class="nav-btn">My Vehicles</a>
+            <a href="/settings" class="nav-btn">Profile Settings</a>
+            <a href="/parking-lots" class="nav-btn">View Lots</a>
+        </div>
+        <div class="profile-section">
+            <a href="/profile" class="profile-link">My Profile</a>
+        </div>
     </div>
 
     <div id="logo-container">
@@ -27,13 +27,14 @@
         <h1>Login</h1>
         <form id="login-form">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
             
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
 
             <button type="submit">Login</button>
         </form>
+        <p class="form-footer">Don't have an account? <a href="/register" class="form-link">Register Here</a>!</p>
     </div>
     <script src="/app.js"></script>
 </body>
