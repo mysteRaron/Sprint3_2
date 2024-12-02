@@ -13,8 +13,8 @@
 }
 
 html, body {
-    height: 100%; /* Ensures that the html and body can expand as needed */
-    width: 100%; /* Ensures width covers the viewport */
+    height: 100%;
+    width: 100%;
     margin: 0;
     overflow-x: hidden; /* Hides horizontal scrollbar */
     font-family: Arial, sans-serif;
@@ -28,11 +28,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Minimum height of viewport */
-    overflow-y: auto; /* Allows vertical scrolling */
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
-/* Navigation Bar */
 #top-nav {
     display: flex;
     justify-content: space-between;
@@ -44,7 +43,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav-center {
@@ -72,20 +71,18 @@ body {
     transform: scale(1.1);
 }
 
-/* Logo Container */
 #logo-container {
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 #logo {
-    height: 100px;
+    height: 60px;
     width: auto;
 }
 
-/* Page Container */
 .page {
     display: flex;
     flex-direction: column;
@@ -111,7 +108,6 @@ body {
     text-align: center;
 }
 
-/* Form Styling */
 form {
     display: flex;
     flex-direction: column;
@@ -128,8 +124,7 @@ form label {
     font-size: 1.1rem;
 }
 
-form input,
-form select {
+form input, form select {
     width: 100%;
     max-width: 350px;
     padding: 12px;
@@ -171,7 +166,6 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     transform: translateY(-2px);
 }
 
-/* Parking Lot Section */
 .parking-lot {
     display: flex;
     flex-direction: column;
@@ -202,13 +196,14 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     margin: 0;
 }
 
+
 /* Timer Page Styling */
 #parking-timer-page {
     text-align: center;
     padding: 20px;
 }
 
-#timer {
+#timer-display {
     font-size: 48px;
     font-weight: bold;
     margin: 20px 0;
@@ -217,6 +212,10 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
 
 .extension-section {
     background-color: var(--light-gray);
+
+.container {
+    width: 100%;
+
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
@@ -331,11 +330,10 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     line-height: 1.5;
 }
 
-/* Hide old bottom navigation */
-#bottom-nav {
+#payment-confirmation {
     display: none;
 }
 
-
-
-
+#bottom-nav {
+    display: none;
+}

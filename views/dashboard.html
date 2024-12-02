@@ -56,46 +56,38 @@
             </section>
 
             <section class="info-section">
-                <h2>Select a Parking Lot</h2>
-                <!-- Parking lot details can also be grouped -->
-                <div class="parking-lot-details">
-                    <div class="parking-lot">
-                        <h2>Girard Park Circle Garage</h2>
-                        <p id="lot1-spots">200 Spots Available</p>
-                        <button class="select-lot-btn" data-lot="lot1">Select</button>
-                    </div>
-                    <div class="parking-lot">
-                        <h2>Wilson Lot</h2>
-                        <p id="lot2-spots">200 Spots Available</p>
-                        <button class="select-lot-btn" data-lot="lot2">Select</button>
-                    </div>
-                    <div class="parking-lot">
-                        <h2>611 St. Landry Garage</h2>
-                        <p id="lot3-spots">200 Spots Available</p>
-                        <button class="select-lot-btn" data-lot="lot3">Select</button>
-                    </div>
+                <h2>Select a Parking Lot and Confirm Your Session</h2>
+                <div class="parking-lot-details" id="parking-lot-details">
+                    <!-- Dynamic parking lots will be inserted here -->
                 </div>
-            </section>
-
-            <section class="info-section">
-                <div class="session-info">
-                    <h2>Confirm Parking Session</h2>
+                <div id="payment-confirmation" style="display:none;">
+                    <h3>Confirm Parking Session</h3>
                     <label for="hours">Select Hours:</label>
                     <input type="number" id="hours" name="hours" min="1" max="24" value="1">
                     <p>Total Cost: $<span id="total-cost">10</span></p>
-                    <button id="confirm-payment-btn" type="submit">Confirm Payment</button>
+                    <button id="confirm-payment-btn">Confirm Payment</button>
                 </div>
+            </section>
+            
+            <section class="info-section">
+
+                <h2>Parking Timer</h2>
+                <div id="timer-display">00:00:00</div>
+
             </section>
 
             <section class="info-section">
                 <h2>Your Recent Parking Sessions</h2>
-                <div id="session-info"></div>
+                <div id="recent-sessions"></div> <!-- Placeholder for parking session data -->
+                
+
             </section>
         </div>
     </div>
     <script src="app.js"></script>
 </body>
 </html>
+
 
 
 
