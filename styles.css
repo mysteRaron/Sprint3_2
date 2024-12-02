@@ -208,10 +208,12 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     font-weight: bold;
     margin: 20px 0;
     color: var(--primary-red);
+    text-align: center;
 }
 
 .extension-section {
     background-color: var(--light-gray);
+}
 
 .container {
     width: 100%;
