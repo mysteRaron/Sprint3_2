@@ -9,15 +9,12 @@
 <body>
     <!-- Navigation Bar -->
     <div id="top-nav">
-        <a href="/" class="nav-btn">Home</a>
-        <a href="/register" class="nav-btn">Register</a>
-        <a href="/login" class="nav-btn">Login</a>
-        <a href="/vehicle" class="nav-btn">Vehicle Info</a>
-        <a href="/paymentInfo" class="nav-btn">Payment Info</a>
-        <a href="/settings" class="nav-btn">Settings</a>
-        <a href="/parking-lots" class="nav-btn">Parking Lots</a>
-        <a href="/confirm-payment" class="nav-btn">Confirm Payment</a>
-        <a href="/timer" class="nav-btn">Timer</a>
+        <div class="nav-center">
+            <a href="/" class="nav-btn">Home</a>
+            <a href="/vehicle" class="nav-btn">My Vehicles</a>
+            <a href="/settings" class="nav-btn">Profile Settings</a>
+            <a href="/parking-lots" class="nav-btn">View Lots</a>
+        </div>
     </div>
 
     <div id="logo-container">
@@ -25,11 +22,15 @@
     </div>  
     <div class="page" id="confirm-payment-page">
         <h1>Confirm Parking</h1>
-        <label for="hours">Select Hours:</label>
-        <input type="number" id="hours" name="hours" min="1" max="24" value="1">
+        <div class="form-section">
+            <label for="hours" class="form-label">Select Hours:</label>
+            <input type="number" id="hours" name="hours" min="1" max="24" value="1" class="form select">
+        </div>
         
-        <p>Total Cost: $<span id="total-cost">10</span></p>
-        <button id="confirm-payment-btn">Confirm Payment</button>
+        <div class="payment-summary">
+            <p>Total Cost: $<span id="total-cost">10</span></p>
+        </div>
+        <button id="confirm-payment-btn" class="button">Confirm Payment</button>
     </div>
     <script src="/app.js"></script>
 </body>
