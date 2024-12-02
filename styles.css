@@ -5,10 +5,10 @@
 }
 
 html, body {
-    height: 100%; /* Ensures that the html and body can expand as needed */
-    width: 100%; /* Ensures width covers the viewport */
+    height: 100%;
+    width: 100%;
     margin: 0;
-    overflow-x: hidden; /* Hides horizontal scrollbar */
+    overflow-x: hidden;
 }
 
 body {
@@ -18,11 +18,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Minimum height of viewport */
-    overflow-y: auto; /* Allows vertical scrolling */
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
-/* Navigation Bar */
 #top-nav {
     display: flex;
     justify-content: center;
@@ -32,7 +31,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 100;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .nav-btn {
@@ -42,26 +41,25 @@ body {
     text-decoration: none;
     padding: 8px 12px;
     border-radius: 5px;
+    margin: 0 10px;
 }
 
 .nav-btn:hover {
     background-color: #e04a00;
 }
 
-/* Logo Container */
 #logo-container {
     position: absolute;
     top: 10px;
     left: 10px;
-    z-index: 100;
+    z-index: 1000;
 }
 
 #logo {
-    height: 100px;
+    height: 60px;
     width: auto;
 }
 
-/* Page Container */
 .page {
     display: flex;
     flex-direction: column;
@@ -72,11 +70,11 @@ body {
     background-color: #fff;
     color: #000;
     border-radius: 10px;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    overflow: auto; /* Enables scrolling within the page container */
-    max-height: calc(100vh - 80px); /* Adjust height to prevent overflow */
-    margin-top: 80px; /* Space for the fixed navigation bar */
-    min-height: calc(100vh - 80px); /* Adjusts height to be less navigation bar */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    max-height: calc(100vh - 80px);
+    margin-top: 80px;
+    margin-bottom: 20px;
 }
 
 .page h1, .page h2 {
@@ -85,7 +83,6 @@ body {
     text-align: center;
 }
 
-/* Form Styling */
 form {
     flex-grow: 1;
     width: 100%;
@@ -102,8 +99,7 @@ form label {
     align-self: flex-start;
 }
 
-form input,
-form select {
+form input, form select {
     width: 100%;
     padding: 12px;
     margin-bottom: 15px;
@@ -139,7 +135,6 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     background-color: #5C0D99;
 }
 
-/* Parking Lot Section */
 .parking-lot {
     display: flex;
     justify-content: space-between;
@@ -156,14 +151,14 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     margin: 0;
 }
 
-#timer {
-    font-size: 32px;
+ 
+#timer-display {
+    font-size: 24px;
     font-weight: bold;
-    margin: 20px 0;
-    text-align: center;
+    color: #FF4C00;   
+    display: none;   
 }
 
-/* Container and Info Sections */
 .container {
     width: 100%;
     padding: 20px;
@@ -172,6 +167,7 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
 }
 
 .info-section {
+    width: 100%;
     margin-top: 20px;
     padding: 20px;
     border-radius: 10px;
@@ -185,11 +181,10 @@ button:hover, .select-lot-btn:hover, #extend-time-btn:hover {
     justify-content: space-between;
 }
 
-/* Hide old bottom navigation */
-#bottom-nav {
+#payment-confirmation {
     display: none;
 }
 
-
-
-
+#bottom-nav {
+    display: none;
+}

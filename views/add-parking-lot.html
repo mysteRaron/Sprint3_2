@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Parking Lot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="top-nav">
+        <a href="/" class="nav-btn">Home</a>
+        <a href="/parking-lots" class="nav-btn">View Parking Lots</a>
+        <a href="/add-parking-lot" class="nav-btn">Add Parking Lot</a>
+    </div>
+
+    <div id="logo-container">
+        <img src="ullPark2.png" alt="U'LL Park Logo" id="logo">
+    </div>  
+
+    <div class="page" id="add-parking-lot-page">
+        <h1>Add a New Parking Lot</h1>
+        <form id="addParkingLotForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <label for="totalSpots">Total Spots:</label>
+            <input type="number" id="totalSpots" name="totalSpots" required>
+
+            <label for="availableSpots">Available Spots:</label>
+            <input type="number" id="availableSpots" name="availableSpots" required>
+
+            <button type="submit">Add Parking Lot</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script> <!-- Include your external JS file -->
+</body>
+</html>
+
